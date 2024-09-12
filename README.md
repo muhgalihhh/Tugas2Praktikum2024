@@ -5,7 +5,6 @@
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg?logo=android)](https://developer.android.com/)
 [![iOS](https://img.shields.io/badge/Platform-iOS-green.svg?logo=apple)](https://developer.apple.com/ios/)
 
-
 ## Deskripsi
 
 Aplikasi Flutter ini adalah sebuah form data sederhana yang memungkinkan pengguna untuk memasukkan dan menyimpan informasi seperti nama, NIM, dan tahun lahir. Aplikasi ini menggunakan tema warna yang bersih dan umum, memberikan pengalaman pengguna yang nyaman dan profesional.
@@ -56,9 +55,12 @@ Sebelum memulai, pastikan Anda memiliki hal berikut:
   - `ui/`
     - `tampil_data.dart`: File untuk menampilkan data yang dimasukkan pengguna.
     - `form_data.dart`: Formulir untuk memasukkan data pengguna.
-   
+
 ## Demo Singkat Aplikasi
 
-https://github.com/user-attachments/assets/4a3b5380-728a-4c84-886d-f870528e759e
+<video width="640" height="360" controls>
+  <source src="https://github.com/user-attachments/assets/4a3b5380-728a-4c84-886d-f870528e759e" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-
+Deskripsi singkat tentang video demo dan apa yang bisa diharapkan oleh penonton.
