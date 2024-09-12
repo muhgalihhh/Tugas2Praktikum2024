@@ -7,8 +7,8 @@
 # Contoh Ukuran Gambar
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/be979a63-9fd0-4c0d-ab2a-d29a97b9faa5" width="80"  alt="chibi-anime"/>
-  <img src="https://github.com/user-attachments/assets/595d8118-e3e4-48a0-ab91-1e181ead8217" width="80"  alt="anime-yes"/>
+  <img src="https://github.com/user-attachments/assets/be979a63-9fd0-4c0d-ab2a-d29a97b9faa5" height="80"  alt="chibi-anime"/>
+  <img src="https://github.com/user-attachments/assets/595d8118-e3e4-48a0-ab91-1e181ead8217" height="80"  alt="anime-yes"/>
 </p>
 
 
