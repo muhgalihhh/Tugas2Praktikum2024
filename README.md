@@ -58,9 +58,9 @@ Sebelum memulai, pastikan Anda memiliki hal berikut:
     - `form_data.dart`: Formulir untuk memasukkan data pengguna.
    
 ## Demo Singkat Aplikasi
-<div>
+
     https://github.com/user-attachments/assets/4a3b5380-728a-4c84-886d-f870528e759e
-</div>
+
 
 
 
