@@ -5,11 +5,18 @@
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg?logo=android)](https://developer.android.com/)
 [![iOS](https://img.shields.io/badge/Platform-iOS-green.svg?logo=apple)](https://developer.apple.com/ios/)
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/be979a63-9fd0-4c0d-ab2a-d29a97b9faa5" height="80"  alt="chibi-anime"/>
-  <img src="https://github.com/user-attachments/assets/595d8118-e3e4-48a0-ab91-1e181ead8217" height="80"  alt="anime-yes"/>
-</p>
-
+<table>
+  <tr>
+    <td style="text-align: center;">
+      <img src="https://github.com/user-attachments/assets/595d8118-e3e4-48a0-ab91-1e181ead8217" height="80" alt="anime-yes"/>
+    </td>
+    <td style="vertical-align: middle;">
+      <h3>Nama: Muhamad Galih</h3>
+      <h3>NIM: H1D022052</h3>
+      <h3>Shift: E (Baru)</h3>
+    </td>
+  </tr>
+</table>
 
 ## Deskripsi
 
