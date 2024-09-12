@@ -1,10 +1,10 @@
-
 # Form Data Flutter App
 
 [![Flutter](https://img.shields.io/badge/Flutter-2.5.0-blue.svg?logo=flutter)](https://flutter.dev/)
 [![Dart](https://img.shields.io/badge/Dart-2.14.0-blue.svg?logo=dart)](https://dart.dev/)
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg?logo=android)](https://developer.android.com/)
 [![iOS](https://img.shields.io/badge/Platform-iOS-green.svg?logo=apple)](https://developer.apple.com/ios/)
+
 
 ## Deskripsi
 
@@ -34,7 +34,7 @@ Sebelum memulai, pastikan Anda memiliki hal berikut:
 2. Masuk ke direktori proyek:
 
     ```bash
-    cd Tugas2Praktikum2024
+    cd yourrepository
     ```
 
 3. Install dependensi dengan perintah:
@@ -56,13 +56,11 @@ Sebelum memulai, pastikan Anda memiliki hal berikut:
   - `ui/`
     - `tampil_data.dart`: File untuk menampilkan data yang dimasukkan pengguna.
     - `form_data.dart`: Formulir untuk memasukkan data pengguna.
-
+   
 ## Demo Singkat Aplikasi
+<div>
+    https://github.com/user-attachments/assets/4a3b5380-728a-4c84-886d-f870528e759e
+</div>
 
-Berikut adalah demo singkat aplikasi ini:
 
-![Demo Video](https://github.com/user-attachments/assets/4a3b5380-728a-4c84-886d-f870528e759e)
 
----
-
-I hope this version looks better! Let me know if there's anything else you need.
