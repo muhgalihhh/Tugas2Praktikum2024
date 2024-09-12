@@ -4,7 +4,6 @@
 [![Dart](https://img.shields.io/badge/Dart-2.14.0-blue.svg?logo=dart)](https://dart.dev/)
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg?logo=android)](https://developer.android.com/)
 [![iOS](https://img.shields.io/badge/Platform-iOS-green.svg?logo=apple)](https://developer.apple.com/ios/)
-# Contoh Ukuran Gambar
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/be979a63-9fd0-4c0d-ab2a-d29a97b9faa5" height="80"  alt="chibi-anime"/>
