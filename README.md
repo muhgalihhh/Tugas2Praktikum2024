@@ -1,3 +1,4 @@
+
 # Form Data Flutter App
 
 [![Flutter](https://img.shields.io/badge/Flutter-2.5.0-blue.svg?logo=flutter)](https://flutter.dev/)
@@ -33,7 +34,7 @@ Sebelum memulai, pastikan Anda memiliki hal berikut:
 2. Masuk ke direktori proyek:
 
     ```bash
-    cd yourrepository
+    cd Tugas2Praktikum2024
     ```
 
 3. Install dependensi dengan perintah:
@@ -58,6 +59,10 @@ Sebelum memulai, pastikan Anda memiliki hal berikut:
 
 ## Demo Singkat Aplikasi
 
-https://github.com/user-attachments/assets/4a3b5380-728a-4c84-886d-f870528e759e
+Berikut adalah demo singkat aplikasi ini:
 
-Deskripsi singkat tentang video demo dan apa yang bisa diharapkan oleh penonton.
+![Demo Video](https://github.com/user-attachments/assets/4a3b5380-728a-4c84-886d-f870528e759e)
+
+---
+
+I hope this version looks better! Let me know if there's anything else you need.
