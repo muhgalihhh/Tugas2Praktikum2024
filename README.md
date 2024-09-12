@@ -5,6 +5,8 @@
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg?logo=android)](https://developer.android.com/)
 [![iOS](https://img.shields.io/badge/Platform-iOS-green.svg?logo=apple)](https://developer.apple.com/ios/)
 
+![chibi-anime](https://github.com/user-attachments/assets/be979a63-9fd0-4c0d-ab2a-d29a97b9faa5)
+![anime-yes](https://github.com/user-attachments/assets/595d8118-e3e4-48a0-ab91-1e181ead8217)
 
 ## Deskripsi
 
