@@ -77,28 +77,182 @@ https://github.com/user-attachments/assets/f5bc60f6-718f-443c-bb7f-38453d9176ad
 ## Penjelasan Alur Data Aplikasi
 
 Alur data dalam aplikasi ini mencakup beberapa tahap utama, yaitu input data, validasi, simulasi loading, pengiriman data ke halaman baru, dan tampilan data yang telah dimasukkan. Berikut adalah penjelasan setiap tahapannya:
+### 1. **Inisialisasi Aplikasi (`main.dart`)**
+Saat aplikasi dijalankan, `main.dart` adalah titik masuk. Di sini, `FormData` dipanggil sebagai halaman utama.
 
-1. **Inisialisasi Aplikasi (`main.dart`)**
-   - Saat aplikasi dijalankan, file `main.dart` dipanggil dan aplikasi memulai dari halaman utama (`FormData`).
-   - Halaman utama ini berfungsi untuk menerima input data dari pengguna.
+```dart
+import 'package:flutter/material.dart';
+import 'ui/form_data.dart';
 
-2. **Input Data Pengguna (`ui/form_data.dart`)**
-   - Pengguna mengisi form dengan memasukkan **Nama**, **NIM**, dan **Tahun Lahir**.
-   - Setiap input dikendalikan oleh `TextEditingController` untuk menyimpan data yang diinput pengguna.
+void main() {
+  runApp(const MyApp());
+}
 
-3. **Validasi Form**
-   - Setelah pengguna menekan tombol "Save", aplikasi memeriksa apakah semua field (Nama, NIM, dan Tahun Lahir) telah diisi dengan benar. Jika salah satu field kosong, pesan error ditampilkan.
-   - Jika semua data valid, aplikasi melanjutkan ke tahap berikutnya.
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-4. **Simulasi Loading**
-   - Setelah data divalidasi, sebuah loader (`CircularProgressIndicator`) muncul selama 2 detik, mensimulasikan proses penyimpanan atau pengolahan data.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Form Data App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const FormData(), // Memanggil halaman utama FormData
+    );
+  }
+}
+```
 
-5. **Pengiriman Data ke Halaman Baru**
-   - Setelah loader selesai, aplikasi menggunakan `Navigator` untuk berpindah dari halaman `FormData` ke halaman `TampilData`. Pada saat navigasi ini, data pengguna (Nama, NIM, dan Tahun Lahir) dikirim ke halaman `TampilData`.
+### 2. **Input Data Pengguna (`ui/form_data.dart`)**
+Pada halaman ini, pengguna mengisi **Nama**, **NIM**, dan **Tahun Lahir** menggunakan `TextFormField`. Setiap input dikendalikan oleh `TextEditingController`.
 
-6. **Tampilan Data di Halaman Baru (`ui/tampil_data.dart`)**
-   - Di halaman `TampilData`, aplikasi menampilkan informasi Nama, NIM, dan Umur (dihitung berdasarkan tahun lahir yang dimasukkan).
-   - Pengguna juga dapat kembali ke halaman form untuk mengubah data dengan menekan tombol "Back".
+```dart
+class FormData extends StatefulWidget {
+  const FormData({Key? key}) : super(key: key);
+
+  @override
+  _FormDataState createState() => _FormDataState();
+}
+
+class _FormDataState extends State<FormData> {
+  final _formKey = GlobalKey<FormState>();
+
+  final TextEditingController _namaController = TextEditingController();
+  final TextEditingController _nimController = TextEditingController();
+  final TextEditingController _tahunLahirController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Form Data'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: <Widget>[
+              TextFormField(
+                controller: _namaController, // Mengambil input nama
+                decoration: const InputDecoration(labelText: 'Nama'),
+              ),
+              TextFormField(
+                controller: _nimController, // Mengambil input NIM
+                decoration: const InputDecoration(labelText: 'NIM'),
+              ),
+              TextFormField(
+                controller: _tahunLahirController, // Mengambil input Tahun Lahir
+                decoration: const InputDecoration(labelText: 'Tahun Lahir'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+### 3. **Validasi Form**
+Saat pengguna menekan tombol "Save", aplikasi memvalidasi apakah semua input sudah diisi dengan benar. Jika ada field yang kosong, pesan error akan ditampilkan.
+
+```dart
+void _saveForm() {
+  if (_formKey.currentState!.validate()) {
+    // Jika form valid
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => TampilData(
+          nama: _namaController.text,
+          nim: _nimController.text,
+          tahunLahir: int.parse(_tahunLahirController.text),
+        ),
+      ),
+    );
+  } else {
+    // Jika form tidak valid
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Semua field harus diisi')),
+    );
+  }
+}
+```
+
+### 4. **Simulasi Loading**
+Setelah validasi berhasil, loader (`CircularProgressIndicator`) ditampilkan selama 2 detik untuk mensimulasikan proses penyimpanan data sebelum halaman baru muncul.
+
+```dart
+void _showLoaderAndNavigate() {
+  showDialog(
+    context: context,
+    builder: (context) {
+      Future.delayed(const Duration(seconds: 2), () {
+        Navigator.of(context).pop(true); // Loader dihilangkan setelah 2 detik
+        _saveForm(); // Melanjutkan ke halaman TampilData
+      });
+      return const Center(child: CircularProgressIndicator());
+    },
+  );
+}
+```
+
+### 5. **Pengiriman Data ke Halaman Baru**
+Setelah loader selesai, data dikirim ke halaman baru (`TampilData`) menggunakan `Navigator`. Di sini, data yang diinput (Nama, NIM, Tahun Lahir) akan diteruskan sebagai parameter ke halaman berikutnya.
+
+```dart
+Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (context) => TampilData(
+      nama: _namaController.text,
+      nim: _nimController.text,
+      tahunLahir: int.parse(_tahunLahirController.text),
+    ),
+  ),
+);
+```
+
+### 6. **Tampilan Data di Halaman Baru (`ui/tampil_data.dart`)**
+Pada halaman `TampilData`, data pengguna ditampilkan. Selain itu, umur dihitung berdasarkan tahun lahir yang dimasukkan.
+
+```dart
+class TampilData extends StatelessWidget {
+  final String nama;
+  final String nim;
+  final int tahunLahir;
+
+  TampilData({
+    required this.nama,
+    required this.nim,
+    required this.tahunLahir,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    int umur = DateTime.now().year - tahunLahir; // Menghitung umur
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Data Tampil'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: <Widget>[
+            Text('Nama: $nama'),
+            Text('NIM: $nim'),
+            Text('Umur: $umur'),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
 
 ## Diagram Alur Data
 
@@ -117,9 +271,6 @@ graph TD;
     I --> J[Pengguna Menekan Tombol Back];
     J --> B;
 ```
-
-Dengan sintaks yang telah diperbaiki ini, diagram alur seharusnya dapat dirender dengan benar di platform yang mendukung Mermaid.
-
 ### Alur Data Aplikasi:
 1. **Start (`main.dart`)**: Aplikasi dimulai dari `main.dart` dan mengarahkan pengguna ke halaman `FormData`.
 2. **Pengguna Mengisi Data**: Pengguna mengisi form dengan data Nama, NIM, dan Tahun Lahir.
@@ -129,6 +280,4 @@ Dengan sintaks yang telah diperbaiki ini, diagram alur seharusnya dapat dirender
 6. **Kirim Data**: Setelah proses simulasi loading, data dikirim ke halaman `TampilData`.
 7. **TampilData**: Data pengguna (Nama, NIM, dan Umur) ditampilkan.
 8. **Pengguna Menekan Tombol Back**: Pengguna dapat kembali ke halaman form untuk mengubah data jika diinginkan.
-
-Diagram ini membantu menggambarkan bagaimana data bergerak dari input pengguna hingga ditampilkan di halaman baru.
 
