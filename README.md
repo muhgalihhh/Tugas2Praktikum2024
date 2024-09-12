@@ -28,7 +28,7 @@ Sebelum memulai, pastikan Anda memiliki hal berikut:
 1. Clone repositori ini ke mesin lokal Anda:
 
     ```bash
-    git clone https://github.com/yourusername/yourrepository.git
+    git clone https://github.com/muhgalihhh/Tugas2Praktikum2024/
     ```
 
 2. Masuk ke direktori proyek:
@@ -55,4 +55,4 @@ Sebelum memulai, pastikan Anda memiliki hal berikut:
   - `main.dart`: Titik masuk aplikasi.
   - `ui/`
     - `tampil_data.dart`: File untuk menampilkan data yang dimasukkan pengguna.
-  - `form_data.dart`: Formulir untuk memasukkan data pengguna.
+    - `form_data.dart`: Formulir untuk memasukkan data pengguna.
