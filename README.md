@@ -59,7 +59,7 @@ Sebelum memulai, pastikan Anda memiliki hal berikut:
 ## Demo Singkat Aplikasi
 
 <video width="640" height="360" controls>
-  <source src="https://github.com/user-attachments/assets/4a3b5380-728a-4c84-886d-f870528e759e" type="video/mp4">
+ https://github.com/user-attachments/assets/4a3b5380-728a-4c84-886d-f870528e759e
   Your browser does not support the video tag.
 </video>
 
