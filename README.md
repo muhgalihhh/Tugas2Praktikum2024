@@ -1,8 +1,10 @@
 # Form Data Flutter App
 
-![Flutter](https://img.shields.io/badge/Flutter-%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20-%234C9EEB)
-![Build Status](https://img.shields.io/github/workflow/status/yourusername/yourrepository/Flutter%20Build?label=Build)
-![License](https://img.shields.io/github/license/yourusername/yourrepository)
+[![Flutter](https://img.shields.io/badge/Flutter-2.5.0-blue.svg?logo=flutter)](https://flutter.dev/)
+[![Dart](https://img.shields.io/badge/Dart-2.14.0-blue.svg?logo=dart)](https://dart.dev/)
+[![Android](https://img.shields.io/badge/Platform-Android-green.svg?logo=android)](https://developer.android.com/)
+[![iOS](https://img.shields.io/badge/Platform-iOS-green.svg?logo=apple)](https://developer.apple.com/ios/)
+
 
 ## Deskripsi
 
