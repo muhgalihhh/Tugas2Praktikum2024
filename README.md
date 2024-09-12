@@ -111,26 +111,24 @@ graph TD;
     C --> D[Validasi Form];
     D --> E{Data Valid?};
     E -- No --> F[Tampilkan Pesan Error];
-    E -- Yes --> G[Tampilkan Loader (2 Detik)];
+    E -- Yes --> G[Tampilkan Loader];
     G --> H[Kirim Data ke Halaman TampilData];
     H --> I[TampilData - Hitung Umur dan Tampilkan Data];
     I --> J[Pengguna Menekan Tombol Back];
     J --> B;
 ```
 
-## Penjelasan Diagram Alur:
-1. **Start (main.dart)**: Aplikasi dimulai dari `main.dart` dan mengarahkan ke halaman `FormData`.
-2. **Halaman FormData**: Pengguna melihat form untuk mengisi data Nama, NIM, dan Tahun Lahir.
-3. **Pengisian Data**: Pengguna memasukkan data ke dalam field yang disediakan.
-4. **Validasi Form**: Setelah pengguna menekan tombol "Save", data akan divalidasi.
-5. **Data Valid?**: Jika data tidak valid (salah satu field kosong), pesan error ditampilkan. Jika data valid, aplikasi menampilkan loader.
-6. **Loader (Simulasi Proses)**: Loader muncul selama 2 detik untuk mensimulasikan pemrosesan data.
-7. **Kirim Data ke Halaman TampilData**: Setelah loader selesai, aplikasi mengirim data pengguna ke halaman `TampilData`.
-8. **TampilData**: Di halaman ini, data ditampilkan dan umur dihitung berdasarkan tahun lahir.
-9. **Navigasi Kembali**: Pengguna dapat kembali ke halaman `FormData` dengan menekan tombol "Back" untuk mengubah data yang sudah diinput.
+Dengan sintaks yang telah diperbaiki ini, diagram alur seharusnya dapat dirender dengan benar di platform yang mendukung Mermaid.
 
-Dengan diagram dan alur data ini, proses pergerakan data di dalam aplikasi menjadi lebih jelas, mulai dari input awal hingga tampilannya di halaman kedua.
+### Alur Data Aplikasi:
+1. **Start (`main.dart`)**: Aplikasi dimulai dari `main.dart` dan mengarahkan pengguna ke halaman `FormData`.
+2. **Pengguna Mengisi Data**: Pengguna mengisi form dengan data Nama, NIM, dan Tahun Lahir.
+3. **Validasi Form**: Aplikasi memvalidasi apakah semua field telah terisi.
+4. **Data Valid?**: Aplikasi mengecek apakah data valid. Jika tidak valid, pesan error akan ditampilkan.
+5. **Tampilkan Loader**: Jika data valid, aplikasi menampilkan loader selama 2 detik untuk mensimulasikan proses pengiriman data.
+6. **Kirim Data**: Setelah proses simulasi loading, data dikirim ke halaman `TampilData`.
+7. **TampilData**: Data pengguna (Nama, NIM, dan Umur) ditampilkan.
+8. **Pengguna Menekan Tombol Back**: Pengguna dapat kembali ke halaman form untuk mengubah data jika diinginkan.
 
-
-
+Diagram ini membantu menggambarkan bagaimana data bergerak dari input pengguna hingga ditampilkan di halaman baru.
 
